@@ -169,8 +169,13 @@
      `(header-line ((,class :background ,bg4)))
      `(highlight ((,class (:foreground ,base :background ,highlight))))
      `(hl-line ((,class (:background ,bg2))))
-     `(isearch ((,class (:foreground ,bg1 :background ,mat))))
-     `(lazy-highlight ((,class (:background ,green-bg-s :weight normal))))
+
+     ;; `(isearch ((,class (:foreground ,bg1 :background ,mat))))
+     ;; `(lazy-highlight ((,class (:background ,green-bg-s :weight normal))))
+
+     `(isearch ((,class (:foreground ,red-bg :background ,red ))))
+     `(lazy-highlight ((,class (:foreground ,red :weight bold :background ,red-bg :underline t))))
+
      `(link ((,class (:foreground ,comment :underline t))))
      `(link-visited ((,class (:foreground ,comp :underline t))))
      `(match ((,class (:background ,highlight :foreground ,mat))))
@@ -566,9 +571,11 @@
      `(org-agenda-date-weekend ((,class (:inherit bold :foreground ,var))))
      `(org-agenda-done ((,class (:foreground ,suc :height ,(if spacemacs-theme-org-agenda-height 1.2 1.0)))))
      `(org-agenda-structure ((,class (:inherit bold :foreground ,comp))))
-     `(org-block ((,class (:background ,cblk-bg :foreground ,cblk))))
-     `(org-block-begin-line ((,class (:background ,cblk-ln-bg :foreground ,cblk-ln))))
-     `(org-block-end-line ((,class (:background ,cblk-ln-bg :foreground ,cblk-ln))))
+
+     ;; `(org-block ((,class (:background ,cblk-bg :foreground ,cblk))))
+     ;; `(org-block-begin-line ((,class (:background ,cblk-ln-bg :foreground ,cblk-ln))))
+     ;; `(org-block-end-line ((,class (:background ,cblk-ln-bg :foreground ,cblk-ln))))
+
      `(org-clock-overlay ((,class (:foreground ,comp))))
      `(org-code ((,class (:foreground ,cyan))))
      `(org-column ((,class (:background ,highlight))))
