@@ -96,7 +96,7 @@
         (const         (if (eq variant 'dark) (if (true-color-p) "#a45bad" "#d75fd7") (if (true-color-p) "#4e3163" "#8700af")))
 
         (comment       (if (eq variant 'dark) (if (true-color-p) "#2aa1ae" "#008787") (if (true-color-p) "#2aa1ae" "#008787")))
-        (subdued-comment       (if (eq variant 'dark) (if (true-color-p) "#444155" "#008787") (if (true-color-p) "#444155" "#008787")))
+        (subdued-comment (if (eq variant 'dark) (if (true-color-p) "#555266" "#008787") (if (true-color-p) "#444155" "#008787")))
 
         (comment-bg    (if (eq variant 'dark) (if (true-color-p) "#292e34" "#262626") (if (true-color-p) "#ecf3ec" "#ffffff")))
         (comp          (if (eq variant 'dark) (if (true-color-p) "#c56ec3" "#d75fd7") (if (true-color-p) "#6c4173" "#8700af")))
@@ -177,7 +177,7 @@
      ;; `(lazy-highlight ((,class (:background ,green-bg-s :weight normal))))
 
      `(isearch ((,class (:foreground ,red-bg :background ,red :underline t))))
-     `(lazy-highlight ((,class (:foreground ,red :weight bold :background ,red-bg))))
+     `(lazy-highlight ((,class (:foreground ,red :weight bold :background ,red-bg :underline t))))
 
      `(link ((,class (:foreground ,comment :underline t))))
      `(link-visited ((,class (:foreground ,comp :underline t))))
