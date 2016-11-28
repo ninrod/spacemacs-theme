@@ -94,7 +94,10 @@
         (cblk-ln-bg    (if (eq variant 'dark) (if (true-color-p) "#373040" "#333333") (if (true-color-p) "#ddd8eb" "#dfdfff")))
         (cursor        (if (eq variant 'dark) (if (true-color-p) "#e3dedd" "#d0d0d0") (if (true-color-p) "#100a14" "#121212")))
         (const         (if (eq variant 'dark) (if (true-color-p) "#a45bad" "#d75fd7") (if (true-color-p) "#4e3163" "#8700af")))
+
         (comment       (if (eq variant 'dark) (if (true-color-p) "#2aa1ae" "#008787") (if (true-color-p) "#2aa1ae" "#008787")))
+        (subdued-comment       (if (eq variant 'dark) (if (true-color-p) "#444155" "#008787") (if (true-color-p) "#444155" "#008787")))
+
         (comment-bg    (if (eq variant 'dark) (if (true-color-p) "#292e34" "#262626") (if (true-color-p) "#ecf3ec" "#ffffff")))
         (comp          (if (eq variant 'dark) (if (true-color-p) "#c56ec3" "#d75fd7") (if (true-color-p) "#6c4173" "#8700af")))
         (err           (if (eq variant 'dark) (if (true-color-p) "#e0211d" "#e0211d") (if (true-color-p) "#e0211d" "#e0211d")))
@@ -153,7 +156,7 @@
      `(eval-sexp-fu-flash ((,class (:background ,suc :foreground ,bg1))))
      `(eval-sexp-fu-flash-error ((,class (:background ,err :foreground ,bg1))))
      `(font-lock-builtin-face ((,class (:foreground ,keyword))))
-     `(font-lock-comment-face ((,class (:foreground ,comment :background ,(when spacemacs-theme-comment-bg comment-bg)))))
+     `(font-lock-comment-face ((,class (:foreground ,subdued-comment :background ,(when spacemacs-theme-comment-bg comment-bg)))))
      `(font-lock-constant-face ((,class (:foreground ,const))))
      `(font-lock-doc-face ((,class (:foreground ,comment))))
      `(font-lock-function-name-face ((,class (:foreground ,func :inherit bold))))
@@ -164,7 +167,7 @@
      `(font-lock-string-face ((,class (:foreground ,str))))
      `(font-lock-type-face ((,class (:foreground ,type :inherit bold))))
      `(font-lock-variable-name-face ((,class (:foreground ,var))))
-     `(font-lock-warning-face ((,class (:foreground ,war :background ,bg1))))
+     `(font-lock-warning-face ((,class (:foreground ,red :background ,red-bg))))
      `(fringe ((,class (:background ,bg1 :foreground ,base))))
      `(header-line ((,class :background ,bg4)))
      `(highlight ((,class (:foreground ,base :background ,highlight))))
@@ -173,8 +176,8 @@
      ;; `(isearch ((,class (:foreground ,bg1 :background ,mat))))
      ;; `(lazy-highlight ((,class (:background ,green-bg-s :weight normal))))
 
-     `(isearch ((,class (:foreground ,red-bg :background ,red ))))
-     `(lazy-highlight ((,class (:foreground ,red :weight bold :background ,red-bg :underline t))))
+     `(isearch ((,class (:foreground ,red-bg :background ,red :underline t))))
+     `(lazy-highlight ((,class (:foreground ,red :weight bold :background ,red-bg))))
 
      `(link ((,class (:foreground ,comment :underline t))))
      `(link-visited ((,class (:foreground ,comp :underline t))))
@@ -572,7 +575,7 @@
      `(org-agenda-done ((,class (:foreground ,suc :height ,(if spacemacs-theme-org-agenda-height 1.2 1.0)))))
      `(org-agenda-structure ((,class (:inherit bold :foreground ,comp))))
 
-     ;; `(org-block ((,class (:background ,cblk-bg :foreground ,cblk))))
+     `(org-block ((,class (:background ,cblk-bg :foreground ,cblk))))
      ;; `(org-block-begin-line ((,class (:background ,cblk-ln-bg :foreground ,cblk-ln))))
      ;; `(org-block-end-line ((,class (:background ,cblk-ln-bg :foreground ,cblk-ln))))
 
@@ -699,7 +702,7 @@
      `(web-mode-doctype-face ((,class (:inherit ,font-lock-comment-face))))
      `(web-mode-function-name-face ((,class (:inherit ,font-lock-function-name-face))))
      `(web-mode-html-attr-name-face ((,class (:foreground ,func))))
-     `(web-mode-html-attr-value-face ((,class (:foreground ,keyword))))
+     `(web-mode-html-attr-value-face ((,class (:foreground ,str))))
      `(web-mode-html-tag-face ((,class (:foreground ,keyword))))
      `(web-mode-keyword-face ((,class (:foreground ,keyword))))
      `(web-mode-string-face ((,class (:foreground ,str))))
@@ -733,6 +736,7 @@
      `(ffap ((,class (:foreground ,base))))
      `(flx-highlight-face ((,class (:foreground ,comp :underline nil))))
      `(icompletep-determined ((,class :foreground ,keyword)))
+
      `(js2-external-variable ((,class (:foreground ,comp))))
      `(js2-function-param ((,class (:foreground ,const))))
      `(js2-jsdoc-html-tag-delimiter ((,class (:foreground ,str))))
@@ -740,6 +744,8 @@
      `(js2-jsdoc-value ((,class (:foreground ,str))))
      `(js2-private-function-call ((,class (:foreground ,const))))
      `(js2-private-member ((,class (:foreground ,base))))
+     `(js2-object-property ((,class (:foreground ,war))))
+
      `(js3-error-face ((,class (:underline ,war))))
      `(js3-external-variable-face ((,class (:foreground ,var))))
      `(js3-function-param-face ((,class (:foreground ,keyword))))
