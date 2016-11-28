@@ -439,7 +439,7 @@
      `(highlight-symbol-face ((,class (:background ,bg2))))
 
 ;;;;; highlight-numbers-number
-     `(highlight-numbers-number ((,class (:foreground ,orange))))
+     `(highlight-numbers-number ((,class (:foreground ,mat))))
 
 ;;;;; hydra
      `(hydra-face-blue ((,class (:foreground ,blue))))
