@@ -176,8 +176,8 @@
      ;; `(isearch ((,class (:foreground ,bg1 :background ,mat))))
      ;; `(lazy-highlight ((,class (:background ,green-bg-s :weight normal))))
 
-     `(isearch ((,class (:foreground ,red-bg :background ,red :underline t))))
-     `(lazy-highlight ((,class (:foreground ,red :weight bold :background ,red-bg :underline t))))
+     `(isearch ((,class (:foreground ,green-bg-s :background ,green :underline t))))
+     `(lazy-highlight ((,class (:foreground ,green :weight bold :background ,green-bg-s :underline t))))
 
      `(link ((,class (:foreground ,comment :underline t))))
      `(link-visited ((,class (:foreground ,comp :underline t))))
