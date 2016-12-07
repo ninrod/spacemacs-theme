@@ -502,10 +502,14 @@
      `(magit-blame-hash    ((,class :background ,yellow-bg :foreground ,func)))
      `(magit-blame-summary ((,class :background ,yellow-bg :foreground ,yellow)))
      `(magit-blame-date    ((,class :background ,yellow-bg :foreground ,green)))
+
      `(magit-branch ((,class (:foreground ,const :inherit bold))))
-     `(magit-branch-current ((,class (:background ,blue-bg :foreground ,blue :inherit bold :box t))))
-     `(magit-branch-local ((,class (:background ,blue-bg :foreground ,blue :inherit bold))))
-     `(magit-branch-remote ((,class (:background ,aqua-bg :foreground ,aqua :inherit bold))))
+
+     `(magit-branch-current ((,class (:background ,blue-bg :foreground ,blue :inherit bold :box 1))))
+     `(magit-branch-local ((,class (:background ,green-bg :foreground ,green :inherit bold :box 1))))
+     `(magit-branch-remote ((,class (:background ,yellow-bg :foreground ,yellow :inherit bold :box 1))))
+
+
      `(magit-diff-context-highlight ((,class (:background ,bg2 :foreground ,base))))
      `(magit-diff-file-header ((,class (:background ,comment-bg :foreground ,comment))))
      `(magit-diff-file-heading ((,class (:background ,comment-bg :foreground ,comment))))
@@ -529,6 +533,7 @@
      `(magit-section-heading        ((,class (:foreground ,keyword :inherit bold))))
      `(magit-section-highlight      ((,class (:background ,bg2))))
      `(magit-section-title ((,class (:background ,bg1 :foreground ,keyword :inherit bold))))
+
 
 ;;;;; man
      `(Man-overstrike ((,class (:foreground ,head1 :inherit bold))))
